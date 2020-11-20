@@ -17,6 +17,7 @@ public class AmountPerClientController {
 
     @GetMapping
     public List<AmountPerClient> reportAmountPerClient() {
-        return amountPerClientService.reportAmountPerClient();
+        List<AmountPerClient> result = amountPerClientService.reportAmountPerClient();
+        return result;
     }
 }

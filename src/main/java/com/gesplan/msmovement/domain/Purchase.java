@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "purchase")
+@Table(name = "Purchase")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,21 +21,21 @@ public class Purchase {
     private Long id;
 
     @Column(name = "client_id", nullable = false)
-    private Long clientId;
+    private Long client_id;
 
     @Column(name = "total_value", nullable = false)
-    private Double totalValue;
+    private Double total_value;
 
     @Column(name = "date", nullable = false)
     private Date date;
 
     @Column(name = "qtd_items", nullable = false)
-    private Double qtdItems;
+    private Double qtd_items;
 
     public Purchase(Long clientId, Double totalValue, Date date, Double qtdItems) {
-        this.clientId = clientId;
-        this.totalValue = totalValue;
+        this.client_id = clientId;
+        this.total_value = totalValue;
         this.date = date;
-        this.qtdItems = qtdItems;
+        this.qtd_items = qtdItems;
     }
 }
